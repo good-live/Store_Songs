@@ -82,12 +82,16 @@ public void Store_Reset()
 public int Store_Use(int client, int id)
 {
 	if (!IsPlayerAlive(client))
+	{
 		CPrintToChat(client, "{default}[{lightblue}TTT{default}]{lightblue}Du musst leben um ein Radio nutzen zu können!");
-	return 1;
+		return 1;
+	}
 	
 	if (g_iCooldown[client] > GetTime())
+	{
 		CPrintToChat(client, "{default}[{lightblue}TTT{default}]{lightblue}Dein Radio hat noch einen Cooldown!");
-	return 1;
+		return 1;
+	}
 	
 	int index = Store_GetDataIndex(id);
 	
