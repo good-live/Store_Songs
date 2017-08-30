@@ -86,7 +86,8 @@ public int Store_Use(int client, int id)
 	return 1;
 	
 	if (g_iCooldown[client] > GetTime())
-		return 1;
+		CPrintToChat(client, "{default}[{lightblue}TTT{default}]{lightblue}Dein Radio hat noch einen Cooldown!");
+	return 1;
 	
 	int index = Store_GetDataIndex(id);
 	
