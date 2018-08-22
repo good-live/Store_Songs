@@ -34,7 +34,7 @@ public void OnPluginStart()
 	g_aPaths = new ArrayList(PLATFORM_MAX_PATH);
 	g_aCooldowns = new ArrayList();
 	
-	Store_RegisterHandler("song", "", Store_OnMapStart, Store_Reset, Store_Config, Store_Use, INVALID_FUNCTION, false);
+	Store_RegisterHandler("song", "path", Store_OnMapStart, Store_Reset, Store_Config, Store_Use, INVALID_FUNCTION, false);
 	
 	g_cHP = CreateConVar("store_song_hp", "100", "The amount of hp that the spawned radio has.");
 	AutoExecConfig(true);
